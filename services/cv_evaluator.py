@@ -1,6 +1,12 @@
 from langchain_openai import ChatOpenAI
+from dotenv import load_dotenv
+import os
+
+load_dotenv(override=True)
+
 from models.cv_model import AnalisisCV
 from prompts.cv_prompts import crear_sistema_prompts
+
 
 def crear_evaluador_cv():
     modelo_base = ChatOpenAI(
